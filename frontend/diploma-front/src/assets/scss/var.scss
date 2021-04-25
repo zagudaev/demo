@@ -1,0 +1,44 @@
+$color-white: #fff;
+$color-light-gray: #efefef;
+$color-dark-gray: #555; //#C0C0C0
+
+$color-border-gray: #afafaf;
+
+$bg-white: $color-white;
+$bg-light-gray: $color-light-gray;
+$bg-dark-gray: $color-dark-gray;
+
+$font-color-black: #232323;
+$font-color-active: $color-white;
+$header-font-color-gray: #6a6a6a;
+
+$header-height: 50px;
+
+@mixin def-font() {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  font-weight: 400;
+  color: $font-color-black;
+}
+
+@mixin header-font-gray() {
+  @include def-font;
+  color: $header-font-color-gray;
+}
+
+@mixin box-shadow-bold {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+@mixin box-shadow-light {
+  transition-property: box-shadow;
+  transition-duration: 0.4s;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+  &:hover {
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+@mixin image($dir) {
+  background: url($dir) center no-repeat;
+  background-size: cover;
+}
